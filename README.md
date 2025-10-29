@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Savvy Tech List Management
 
-## Getting Started
+A modern, responsive list management application built with Next.js, TypeScript, and Mantine UI. Features include real-time list updates, analytics, and persistent storage.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern UI/UX**: Built with Mantine UI components and Tailwind CSS
+- **Type-Safe**: Full TypeScript support
+- **Persistent Storage**: Local storage integration with Zustand
+- **Analytics Dashboard**: Track item statistics
+- **Responsive Design**: Mobile-first approach
+- **Modular Architecture**: Component-based structure
+- **Testing**: Jest for unit tests and Cypress for E2E testing
+
+## 📦 Tech Stack
+
+- **Framework**: Next.js 16
+- **UI Library**: Mantine UI 8.3
+- **State Management**: Zustand 5.0
+- **Styling**: Tailwind CSS 4
+- **Icons**: Tabler Icons
+- **Testing**: Jest + Testing Library, Cypress
+- **Form Handling**: Mantine Form + Yup
+
+## 🛠️ Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SinaShateri/savvy-tech.git
+cd savvy-tech
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+# If you encounter peer dependency issues, use:
+npm install --legacy-peer-deps
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 🧪 Testing
 
-To learn more about Next.js, take a look at the following resources:
+### Unit Tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run Jest unit tests:
+```bash
+npm test           # Run tests once
+npm run test:watch # Run in watch mode
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### E2E Tests
 
-## Deploy on Vercel
+1. Ensure the development server is running:
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Run Cypress tests:
+```bash
+npm run cypress:open # Open Cypress UI
+# or
+npm run cypress:run # Run in headless mode
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### E2E Test Coverage
+
+The E2E test suite covers:
+- Item Creation
+- Item Editing
+- Item Deletion
+- Form Validation
+- UI State Management
+
+## 📁 Project Structure
+
+```
+app/                  # Next.js app router
+components/
+├── pages/           # Page-specific components
+├── providers/       # Context providers
+└── shared/          # Reusable components
+stores/              # Zustand stores
+utils/               # Utility functions
+cypress/             # E2E tests
+```
+
+## 🔧 Configuration
+
+- `next.config.ts` - Next.js configuration
+- `cypress.config.ts` - Cypress configuration
+- `tsconfig.json` - TypeScript configuration
+- `postcss.config.mjs` - PostCSS configuration
+- `jest.config.cjs` - Jest configuration
+
+## 📝 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm test` - Run unit tests
+- `npm run cypress:open` - Open Cypress UI
+- `npm run cypress:run` - Run Cypress tests headless
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
